@@ -1,4 +1,4 @@
-resource "aws_batch_compute_environment" "sample" {
+resource "aws_batch_compute_environment" "batch_environment" {
   compute_environment_name = "${var.compute_environment_name}"
   compute_resources {
     instance_role      = "${var.instance_role}"
