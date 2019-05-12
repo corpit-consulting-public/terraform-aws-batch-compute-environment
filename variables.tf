@@ -96,7 +96,7 @@ variable "spot_iam_fleet_role" {
   default     = ""
 }
 
-variable "subnet" {
+variable "subnets" {
   type        = "list"
   description = "A list of VPC subnet into which the compute resource are launced"
   default     = []
