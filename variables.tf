@@ -3,7 +3,6 @@
 variable "compute_environment_name" {
   type        = "string"
   description = "The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and undercores are allowed"
-  default     = ""
 }
 
 variable "compute_resource" {
@@ -15,7 +14,6 @@ variable "compute_resource" {
 variable "service_role" {
   type        = "string"
   description = "The full Amazon Resource Name(ARN) of the IAM role that allows AES Batch to make calls to other AWS services on you behalf"
-  default     = ""
 }
 
 variable "state" {
@@ -27,7 +25,6 @@ variable "state" {
 variable "type" {
   type        = "string"
   description = "The type of the compute environment. Valid items are MANAGED or UNMANAGED"
-  default     = ""
 }
 
 variable "bid_percentage" {
@@ -57,13 +54,11 @@ variable "image_id" {
 variable "instance_role" {
   type        = "string"
   description = "The Amazon ECS instance role applied to Amazon EC2 instance in a computed environment"
-  default     = ""
 }
 
 variable "instance_type" {
   type        = "list"
   description = "A list of instance that may be launched"
-  default     = []
 }
 
 variable "launche_template" {
@@ -75,19 +70,16 @@ variable "launche_template" {
 variable "max_vcpus" {
   type        = "string"
   description = "The maximum number of EC2 vCPUs that an environment can reach"
-  default     = ""
 }
 
 variable "min_vcpus" {
   type        = "string"
   description = "The minimum number of EC2 vCPUs that environment should maintain"
-  default     = ""
 }
 
 variable "security_group_ids" {
   type        = "list"
   description = "A list of EC2 security group that are associated with instances launched in the compuite environments"
-  default     = []
 }
 
 variable "spot_iam_fleet_role" {
@@ -99,7 +91,6 @@ variable "spot_iam_fleet_role" {
 variable "subnets" {
   type        = "list"
   description = "A list of VPC subnet into which the compute resource are launced"
-  default     = []
 }
 
 variable "tags" {
@@ -111,7 +102,6 @@ variable "tags" {
 variable "compute_resources_type" {
   type        = "string"
   description = "The type of compute environment. Valid items are EC2 or SPOT"
-  default     = ""
 }
 
 ##Variable for launch_template
