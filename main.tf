@@ -6,6 +6,7 @@ resource "aws_batch_compute_environment" "batch_environment_managed" {
     instance_type      = ["${var.instance_type}"]
     max_vcpus          = "${var.max_vcpus}"
     min_vcpus          = "${var.min_vcpus}"
+    desired_vcpus      = "${var.desired_vcpus}"
     security_group_ids = ["${var.security_group_ids}"]
     subnets            = ["${var.subnets}"]
     type               = "${var.compute_resources_type}"
@@ -23,9 +24,11 @@ resource "aws_batch_compute_environment" "batch_environment_spot" {
     instance_type      = ["${var.instance_type}"]
     max_vcpus          = "${var.max_vcpus}"
     min_vcpus          = "${var.min_vcpus}"
+    desired_vcpus      = "${var.desired_vcpus}"
     security_group_ids = ["${var.security_group_ids}"]
     subnets            = ["${var.subnets}"]
     type               = "${var.compute_resources_type}"
+    bid_percentage     = "${var.bid_percentage}"
     spot_iam_fleet_role = "${var.spot_iam_fleet_role}"
   }
 
