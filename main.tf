@@ -30,6 +30,7 @@ resource "aws_batch_compute_environment" "batch_environment_spot" {
     type               = "${var.compute_resources_type}"
     bid_percentage     = "${var.bid_percentage}"
     spot_iam_fleet_role = "${var.spot_iam_fleet_role}"
+    bid_percentage      = "${var.bid_percentage}"
   }
 
   service_role         = "${var.service_role}"
