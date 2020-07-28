@@ -68,7 +68,7 @@ If you want to update README.md file, run that script while being in 'hooks' fol
 | subnets | A list of VPC subnet into which the compute resource are launced | list | n/a | yes |
 | tags | Key-value pair tags to be applied to resource that are launched in the compute environment | string | `""` | no |
 | type | The type of the compute environment. Valid items are MANAGED or UNMANAGED | string | n/a | yes |
-| version | The version number of the template. Default: The default version of the launch template | string | `""` | no |
+| template_version | The version number of the template. Default: The default version of the launch template | string | `""` | no |
 
 ## Outputs
 

@@ -119,7 +119,7 @@ variable "launch_template_name" {
   default     = ""
 }
 
-variable "version" {
+variable "template_version" {
   type        = "string"
   description = "The version number of the template. Default: The default version of the launch template"
   default     = ""
