@@ -10,7 +10,7 @@ resource "aws_batch_compute_environment" "batch_environment_managed" {
     subnets            = var.subnets
     type               = var.compute_resources_type
     bid_percentage      = var.compute_resources_type == "SPOT" ? var.bid_percentage : null
-    spot_iam_fleet_role = var.compute_resources_type == "SPOT" ? spot_iam_fleet_role : null
+    spot_iam_fleet_role = var.compute_resources_type == "SPOT" ? var.spot_iam_fleet_role : null
   }
 
   service_role = var.service_role
