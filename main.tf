@@ -10,7 +10,7 @@ resource "aws_batch_compute_environment" "batch_environment" {
     type               = var.compute_resources_type
     desired_vcpus       = var.desired_vcpus
     bid_percentage      = var.compute_resources_type == "SPOT" ? var.bid_percentage : null
-    spot_iam_fleet_role = var.compute_resources_type == "SPOT" ? var.spot_iam_fleet_role : nul
+    spot_iam_fleet_role = var.compute_resources_type == "SPOT" ? var.spot_iam_fleet_role : null
     
     dynamic "launch_template" {
     for_each = var.compute_resources_type == "EC2" ? [] : var.launch_template
