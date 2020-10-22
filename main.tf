@@ -13,11 +13,11 @@ resource "aws_batch_compute_environment" "batch_environment" {
     spot_iam_fleet_role = var.compute_resources_type == "SPOT" ? var.spot_iam_fleet_role : null
     
     dynamic "launch_template" {
-    for_each = var.compute_resources_type == "EC2" ? [] : var.launch_template
+    for_each = var.compute_resources_type == "EC2" ? {} : var.launch_template
     content {
-        launch_template_id   = var.launch_template_id
-        launch_template_name = var.launch_template_name
-        version              = var.tempalte_version
+        launch_template_id   = launch_template.value.launch_template_id
+        launch_template_name = launch_template.value.launch_template_name
+        version              = launch_template.value.tempalte_version
       }
     }
   }
