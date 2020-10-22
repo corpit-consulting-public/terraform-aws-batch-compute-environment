@@ -27,6 +27,7 @@ resource "aws_batch_compute_environment" "batch_environment_spot" {
     subnets            = ["${var.subnets}"]
     type               = "${var.compute_resources_type}"
     spot_iam_fleet_role = "${var.spot_iam_fleet_role}"
+    bid_percentage      = "${var.bid_percentage}"
   }
 
   service_role         = "${var.service_role}"
