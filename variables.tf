@@ -102,7 +102,7 @@ variable "subnets" {
 variable "tags" {
   type        = map(any)
   description = "Key-value pair tags to be applied to resource that are launched in the compute environment"
-  default     = ""
+  default     = {}
 }
 
 variable "compute_resources_type" {
