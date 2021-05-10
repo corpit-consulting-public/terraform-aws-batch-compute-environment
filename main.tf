@@ -8,6 +8,7 @@ resource "aws_batch_compute_environment" "batch_environment" {
     security_group_ids = var.security_group_ids
     subnets            = var.subnets
     type               = var.compute_resources_type
+    tags               = var.compute_resource_tags
     desired_vcpus       = var.desired_vcpus
     bid_percentage      = var.compute_resources_type == "SPOT" ? var.bid_percentage : null
     spot_iam_fleet_role = var.compute_resources_type == "SPOT" ? var.spot_iam_fleet_role : null
@@ -20,6 +21,7 @@ resource "aws_batch_compute_environment" "batch_environment" {
         version              = launch_template.value.tempalte_version
       }
     }
+    tags              = var.tags
   }
 
   service_role = var.service_role

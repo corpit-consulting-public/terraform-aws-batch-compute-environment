@@ -5,6 +5,12 @@ variable "compute_environment_name" {
   description = "The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and undercores are allowed"
 }
 
+variable "tags" {
+  type        = map(any)
+  description = "Tags to be applied to Batch Compute Instances."
+  default     = null
+}
+
 variable "compute_resource" {
   type        = string
   description = "Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments"
@@ -99,10 +105,10 @@ variable "subnets" {
   description = "A list of VPC subnet into which the compute resource are launced"
 }
 
-variable "tags" {
+variable "compute_resource_tags" {
   type        = map(any)
   description = "Key-value pair tags to be applied to resource that are launched in the compute environment"
-  default     = ""
+  default     = null
 }
 
 variable "compute_resources_type" {
