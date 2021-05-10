@@ -21,10 +21,10 @@ resource "aws_batch_compute_environment" "batch_environment" {
         version              = launch_template.value.tempalte_version
       }
     }
-    tags              = var.tags
   }
 
   service_role = var.service_role
   type         = var.type
   state        = var.state
+  tags              = var.tags
 }
